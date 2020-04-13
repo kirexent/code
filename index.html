@@ -1,70 +1,98 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Версия 1.0</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <script src="main.js"> </script>
-        <header>
-            <h1 class="page-title">  Версия 1.0 </h1>
-        </header>
-        <main>
-              <div class="zz"> №3 class - это селектор класса </div>
-              <ul class="list1"> 
-                  <li><a>№4 контекстный селектор </a></li>
-                  <li> №5 селектор по типу элемента </li>
-                  <li><a href=https:> №6 и №19 Псевдокласс :link,hover SVG и CSS + №13 картинка к ссылке </a></li>
-                </ul>
-                <p>№7 Это соседний селектор</p>
-                <div id="container">
-                    <ul>
-                       <li>Элемент списка
-                         <ul>
-                            <li>№ 8 Селектор #container > ul</li>
-                         </ul>
-                       </li>
-                       <li><a href="page-1.html"> №10, №11 Перейди по ссылке!!!</a></li>
-                    </ul>
-              </div>
-              <p class="num9">№9 селектор X ~ Y</p>
-              <div> 
-                <p><a href="files/3.jpg" data-filetype="image"> № 15 Image Link </a>№14 управляет ссылками на .jpg</p>
-                <p><a href="files/preview.jpg" data-info="external image"> № 16 Нажми на меня </a></p>
-                </div>
-                <div class="kote-container">
-                    <img class="kote" src="files/preview-1.jpg" width="5%" height="5%" alt="Котег">
-                  </div>
-                  <p> №17 минус, нет чекбоксов</p>
-                <ul class="clearfix">
-                    <li>№ 22 - 27</li>
-                    <li>второй</li>
-                    <li>третий</li>
-                  </ul>
-                                 <p>№18 .clearfix:after</p>
-            <p> №21 X::pseudoElement</p>
+  <head>
+    <meta charset="utf-8" />
+    <title>Версия 1.0</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="main.js"></script>
+    <header>
+      <h1 class="page-title">Версия 1.0</h1>
+    </header>
+    <main>
+      <div class="zz">№3 class - это селектор класса</div>
+      <ul class="list1">
+        <li><a>№4 контекстный селектор </a></li>
+        <li>№5 селектор по типу элемента</li>
+        <li>
+          <a href="/">
+            №6 и №19 Псевдокласс :link,hover SVG и CSS + №13 картинка к ссылке
+          </a>
+        </li>
+      </ul>
+      <p>№7 Это соседний селектор</p>
+      <div id="container">
+        <ul>
+          <li>
+            Элемент списка
+            <ul>
+              <li>№ 8 Селектор #container > ul</li>
+            </ul>
+          </li>
+          <li>
+            <a title="ololo">
+			  №10, №11 Перейди по ссылке!!!
+			</a>
+			<a href="page-1.html" title="alala">
+				№10, №11 Перейди по ссылке!!!
+			</a>
+			<a href="page-1.html" title="ulala">
+				№10, №11 Перейди по ссылке!!!
+			</a>
+          </li>
+        </ul>
+      </div>
+      <p class="num9">№9 селектор X ~ Y</p>
+      <div>
+        <p>
+          <a href="files/3.jpg" data-filetype="image"> № 15 Image Link </a>№14
+          управляет ссылками на .jpg
+        </p>
+        <p>
+          <a href="files/preview.jpg" data-info="external image">
+            № 16 Нажми на меня
+          </a>
+        </p>
+      </div>
+      <div class="kote-container">
+        <img
+          class="kote"
+          src="files/preview-1.jpg"
+          width="5%"
+          height="5%"
+          alt="Котег"
+        />
+      </div>
+      <p>№17 минус, нет чекбоксов</p>
+      <ul class="clearfix">
+        <li>№ 22 - 27</li>
+        <li>второй</li>
+        <li>третий</li>
+      </ul>
+      <p>№18 .clearfix:after</p>
+      <p>№21 X::pseudoElement</p>
 
-            <div >
-                <p> My paragraph here. </p>
-                <ul class="theLast">
-                   <li> List Item 1 </li>
-                   <li> List Item 2 </li>
-                </ul>
-                
-                <ul>
-                   <li> List Item 3 </li>
-                   <li> List Item 4 </li>
-                </ul>   
-               </div>
+      <div>
+        <p>My paragraph here.</p>
+        <ul class="theLast">
+          <li>List Item 1</li>
+          <li>List Item 2</li>
+        </ul>
 
-        </main>
-        <footer>
-            <div id="help"> 
-               №2 Использование символа решётки. Этот элемент помогает в случае, когда вы находитесь в осознании того
-                факта, что совершенно не понимаете, кто и как вам может помочь. Именно
-                в этот момент мы и подсказываем, что помочь вам никто не сможет.
-               </div>
-        </footer>
-    </body>
+        <ul>
+          <li>List Item 3</li>
+          <li>List Item 4</li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <div id="help">
+        №2 Использование символа решётки. Этот элемент помогает в случае, когда
+        вы находитесь в осознании того факта, что совершенно не понимаете, кто и
+        как вам может помочь. Именно в этот момент мы и подсказываем, что помочь
+        вам никто не сможет.
+      </div>
+    </footer>
+  </body>
 </html>
