@@ -182,6 +182,10 @@ a[data-info~="external"] {
     background-position: -810px -228px;
   }
 
+  .red-input:focus {
+  color: red;
+}
+
 #help {
     position: relative; /* Абсолютное позиционирование */
     left: 1%; /* Положение элемента от левого края */
