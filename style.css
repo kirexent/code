@@ -40,7 +40,10 @@ a {
     color: rgb(187, 187, 247); /* Синий цвет текста */
 }
 
-a:hover { color: red; }
+a:hover { 
+    color: red; 
+    border-bottom: 1px solid rgb(23, 158, 63);
+}
 
 ul + p {
     color: red;
@@ -87,7 +90,97 @@ a[data-info~="external"] {
     text-align: right;
 }
 
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
+  #clearfix>ul {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .clearfix {
+    width: 200px;
+    background: #292929;
+    color: white;
+    list-style: none;
+    padding-left: 0;
+    }
+
+  .clearfix li {
+    float: left;
+    list-style: none;
+    margin-left: 3px;
+    border: 1px solid red;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid #3c3c3c;
+  }
+ 
+  
+  .clearfix { 
+    *display: inline-block; 
+    _height: 1%;
+   }
+
+   p::first-letter {
+    float: absolute;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: cursive;
+    padding-right: 2px;
+   }
+
+   ul:nth-of-type(1) {
+    border: 3px solid rgb(255, 251, 21);
+   }
+
+   ul li:first-child {
+    border-top: none;
+   }
+
+   main p:only-child {
+    color: red;
+   }
+
+   ul > li:only-of-type {
+    font-weight: bold;
+   }
+
+   .theLast :nth-child(2) {
+    font-weight: bold;
+    color: red;
+   }
+
+   .icon {
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: url(files/pict.jpg) no-repeat;
+  }
+  
+  .open .icon {
+    cursor: pointer;
+    width: 60px;
+    height: 57px;
+    background-position: -140px -30px;
+  }
+  
+  .closed .icon {
+    width: 94px;
+    height: 32px;
+    cursor: pointer;
+    background-position: -12px -240px;
+  }
+  
+  .leaf .icon {
+    width: 93px;
+    height: 43px;
+    cursor: text;
+    background-position: -810px -228px;
+  }
 
 #help {
     position: relative; /* Абсолютное позиционирование */
