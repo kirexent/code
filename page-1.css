@@ -1,23 +1,23 @@
 .red-input:focus {
-	color: red;
+  color: red;
 }
 
-input[type=radio]:checked {
-	margin-right: 20px;
+input[type="radio"]:checked {
+  margin-right: 20px;
 }
 
 .test-psevdo:after {
-	content: 'чо тут не понятно ?';
+  content: "чо тут не понятно ?";
 }
 
 .test-psevdo:before {
-	content: '';
-	width: 60px;
-	height: 60px;
-	float: left;
-	background: url(files/pict.jpg) no-repeat;
+  content: "";
+  width: 60px;
+  height: 60px;
+  float: left;
+  background: url(files/pict.jpg) no-repeat;
 }
 
 .svg {
-	width: 10%;
+  width: 10%;
 }
