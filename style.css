@@ -1,24 +1,68 @@
 body {
-  background: url(files/city2.jpg) no-repeat center center fixed;
+  background: url(files/city.jpg) no-repeat center center fixed;
   background-size: cover;
-  color: #fffffffd;
+  color: #050505fd;
 }
 
 h1 {
   font-size: 24px;
   line-height: normal;
-  color: #ddc5e4fd;
+  color: #0f0911fd;
 }
 
 .page-title {
   font-weight: bold;
   font-size: 36px;
-  line-height: 42px;
   font-family: "Verdana", sans-serif;
   text-align: center;
 }
 
-.zz {
+.fonts-test {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(15, 12, 12);
+}
+
+.fonts-test :nth-child(1) {
+  font-weight: bold;
+  font-size: 25px;
+  /* color: red; при добавлении шрифта слетают картинки, так же наследуется цвет картинки от первой строки в списке */
+}
+
+.fonts-test :nth-child(2) {
+  font-weight: bold;
+  font-size: 25px;
+  color: red; 
+  font-family: 'Shadows Into Light', cursive;
+  list-style-type: circle;
+}
+
+.fonts-test :nth-child(3) {
+  font-weight: bold;
+  color: rgb(229, 255, 0);
+  font-family: 'Indie Flower', cursive;
+  list-style-type: square;
+}
+
+.fonts-test :nth-child(4) {
+  font-weight: bold;
+  color: rgb(0, 4, 255);
+  font-family: 'Pacifico', cursive;
+}
+
+.fonts-test :nth-child(3):before {
+  content: url("files/icons8.png");
+}
+
+.fonts-test .withimg:before {
+  content: "\f110"; 
+  font-family: "Font Awesome 5 free";
+  font-weight:900;
+  display: inline-block;
+    animation: fa-spin 1s steps(8) infinite;
+}
+
+/* .zz {
   font-size: 36px;
 }
 
@@ -28,9 +72,9 @@ ul {
 }
 
 a {
-  font-family: Times, serif; /* Семейство шрифта */
+  font-family: Times, serif; 
   font-size: 25px;
-  color: rgb(187, 187, 247); /* Синий цвет текста */
+  color: rgb(187, 187, 247); 
 }
 
 a:hover {
@@ -73,15 +117,14 @@ a[data-filetype="image"] {
   color: rgb(194, 236, 3);
 }
 
-/* Выбираем атрибут data-info со значением "external" */
 a[data-info~="external"] {
   color: rgb(204, 0, 255);
 }
 
-/* Выбираем атрибут со значчением "image" */
 a[data-info~="image"] {
   border: 1px solid rgb(240, 167, 167);
-}
+} 
+
 
 .kote-container {
   text-align: right;
@@ -149,43 +192,15 @@ ul > li:only-of-type {
   font-weight: bold;
   color: red;
 }
+*/
 
-.icon {
-  width: 60px;
-  height: 60px;
-  float: left;
-  background: url(files/pict.jpg) no-repeat;
-}
-
-.open .icon {
-  cursor: pointer;
-  width: 60px;
-  height: 57px;
-  background-position: -140px -30px;
-}
-
-.closed .icon {
-  width: 94px;
-  height: 32px;
-  cursor: pointer;
-  background-position: -12px -240px;
-}
-
-.leaf .icon {
-  width: 93px;
-  height: 43px;
-  cursor: text;
-  background-position: -810px -228px;
-}
-
-#help {
-  position: relative; /* Абсолютное позиционирование */
-  left: 1%; /* Положение элемента от левого края */
-  /* top: 50px; Положение от верхнего края */
+.help {
+  position: relative; 
+  left: 1%; 
   bottom: 10%;
-  width: 90%; /* Ширина блока */
-  padding: 5px; /* Поля вокруг текста */
-  background: #d9e7f3; /* Цвет фона */
+  width: 90%; 
+  padding: 5px; 
+  /* background: #d9e7f3;  */
 }
 
 footer {

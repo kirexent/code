@@ -2,21 +2,52 @@
   color: red;
 }
 
+.icon {
+  width: 60px;
+  height: 60px;
+  float: left;
+  background: url(files/pict.jpg) no-repeat;
+}
+
+.open .icon {
+  cursor: pointer;
+  width: 60px;
+  height: 57px;
+  background-position: -140px -30px;
+}
+
+.closed .icon {
+  width: 94px;
+  height: 32px;
+  cursor: pointer;
+  background-position: -12px -240px;
+}
+
+.leaf .icon {
+  width: 93px;
+  height: 43px;
+  cursor: text;
+  background-position: -810px -228px;
+}
+
 input[type="radio"]:checked {
   margin-right: 20px;
 }
 
 .test-psevdo:after {
   content: "чо тут не понятно ?";
+ 
+  /* float: right; */
+  background: url(files/pict.jpg) no-repeat;
 }
 
-.test-psevdo:before {
+/* .test-psevdo:after {
   content: "";
   width: 60px;
   height: 60px;
   float: left;
-  background: url(files/pict.jpg) no-repeat;
-}
+  
+} */
 
 .svg {
   width: 10%;
