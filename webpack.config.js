@@ -1,8 +1,8 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const fs = require('fs');
-const CopyWebpackPlugin= require('copy-webpack-plugin');
+const fs = require('fs')
 
 function generateHtmlPlugins(templateDir) {
   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
@@ -18,16 +18,15 @@ function generateHtmlPlugins(templateDir) {
   })
 }
 
-const htmlPlugins = generateHtmlPlugins('.code/src/html/views')
-
+const htmlPlugins = generateHtmlPlugins('./src/html/views');
 
 module.exports = {
   entry: [
-    '.code/src/js/index.js',
-    '.code/src/scss/style.scss',
+    './src/js/index.js',
+    './src/scss/style.scss'
   ],
   output: {
-    filename: '.js/bundle.js'
+    filename: './js/bundle.js'
   },
   devtool: "source-map",
   module: {
@@ -39,54 +38,57 @@ module.exports = {
           options: {
             presets: 'env'
           }
-        },
-          test: /\.(sass|scss)$/,
-          include: path.resolve(__dirname, 'src/scss'),
-          use: ExtractTextPlugin.extract({
-            use: [{
-                loader: "css-loader",
-                options: {
-                  sourceMap: true,
-                  minimize: true,
-                  url: false
-                }
-              },
-              {
-                loader: "sass-loader",
-                options: {
-                  sourceMap: true
-                }
+        }
+      },
+      {
+        test: /\.(sass|scss)$/,
+        include: path.resolve(__dirname, 'src/scss'),
+        use: ExtractTextPlugin.extract({
+          use: [{
+              loader: "css-loader",
+              options: {
+                sourceMap: true,
+                minimize: true,
+                url: false
               }
-            ]
-          })
-        },
-      ],
-      
+            },
+            {
+              loader: "sass-loader",
+              options: {
+                sourceMap: true
+              }
+            }
+          ]
+        })
+      },
+      {
         test: /\.html$/,
         include: path.resolve(__dirname, 'src/html/includes'),
         use: ['raw-loader']
       },
-    plugins: [
-      new ExtractTextPlugin({
-        filename: './css/style.bundle.css',
-        allChunks: true,
-      }),
-      new CopyWebpackPlugin([{
-        from: './fonts',
+    ]
+  },
+  plugins: [
+    new ExtractTextPlugin({
+      filename: './css/style.bundle.css',
+      allChunks: true,
+    }),
+    new CopyWebpackPlugin([{
+        from: './src/fonts',
         to: './fonts'
       },
       {
-        from: './favicon',
+        from: './src/favicon',
         to: './favicon'
       },
       {
-        from: './img',
+        from: './src/img',
         to: './img'
       },
       {
-        from: './uploads',
+        from: './src/uploads',
         to: './uploads'
       }
     ]),
-    ].concat(htmlPlugins)
-  };
+  ].concat(htmlPlugins)
+};
