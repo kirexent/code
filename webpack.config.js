@@ -31,7 +31,7 @@ module.exports = {
   devtool: "source-map",
   module: {
     rules: [{
-        test: /\.js$/,
+        test: /\*-my.js$/,
         include: path.resolve(__dirname, 'src/js'),
         use: {
           loader: 'babel-loader',
