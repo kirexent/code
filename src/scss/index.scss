@@ -10,10 +10,10 @@ body {
   display: flex;
   flex: 1;
   justify-content: space-between;
-  &__left img {
+  &__logo img {
     height: 70px;
   }
-  &__right {
+  &__adress {
     padding-right: 50px;
     font-family: "Downcome", cursive;
   }
@@ -59,13 +59,29 @@ body {
   background-color: #258039;
 }
 
+.general_information {
+border: solid 1px black;
+}
+
+.title {
+  border: solid 1px black;
+}
+
+.item {
+  border: solid 1px black;
+}
+
+// .row {
+//   padding: 5px;
+// }
+
 .header,
 .footer {
   @media (max-width: 650px) {
     flex-direction: column;
   }
   min-height: 15vh;
-  background: url(/dist/img/background.jpg);
+  background: url(/src/img/background.jpg);
   padding: 15px;
   color: rgb(7, 1, 26);
 }
