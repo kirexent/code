@@ -11,7 +11,6 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'css/bundle.css',
-            chunkFilename: 'css/[id].css',
         }),
         new HtmlWebpackPlugin({
             filename: 'onpug.html',
