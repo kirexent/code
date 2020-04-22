@@ -155,3 +155,6 @@ function iteratorPlud (i, number) {
 for (let i=1;i<=30;i=iteratorPlud(i, 3)) {
 	document.write (i+'<br />');
 }
+
+// экринарование
+"вася \"дыбил\" тупой"

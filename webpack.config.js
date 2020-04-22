@@ -12,13 +12,12 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'css/bundle.css',
         }),
-        new HtmlWebpackPlugin(),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/html/views/index.html',
             inject: true
         }),
-            new HtmlWebpackPlugin({
+        new HtmlWebpackPlugin({
             filename: 'onpug.html',
             template: './src/pug/pages/onpug.pug',
             inject: true

@@ -5,17 +5,23 @@ html(lang='ru')
     link(rel='stylesheet', href='../../../dist/css/bundle.css')
   body
     .wrapper
+      .test olololol
+        .test2 2adsdas
       .announcement
         .announcement__title Front-end developer
-        .announcement__company
-          | Adamant
-        .announcement__areas
-          .announcement__programs  JavaScript
-          .announcement__programs  Illustrator
-          .announcement__programs  node.js
-          .announcement__programs  less/sass
-          .announcement__programs  sketch
-          .announcement__programs  OOCSS
+        .announcement__company Adamant
+        ul.announcement__areas
+          li.announcement__programs  JavaScript
+          li.announcement__programs  Illustrator
+          li.announcement__programs  node.js
+          li.announcement__programs  less/sass
+          li.announcement__programs  sketch
+          li.announcement__programs  OOCSS
+        - var text = [ 't', 'y', 'g'];
+        ul
+            - for (var i=0; i<=2; i++) {
+                li= text[i]
+            - }
         .announcement__description
           | Команда создателей платформы RadiumOne, входящей в пятёрку мировых лидеров
           | по охвату аудитории /рейтинг comScore/, открывает позицию Front-end Developer. Это вёрстка новых компонентов
