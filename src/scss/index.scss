@@ -1,8 +1,11 @@
+$border-size: 5px;
+$list-bg-color: #f7f7f9;
+
 body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  margin: 0;
+  //   display: flex;
+  //   min-height: 100vh;
+  //   flex-direction: column;
+  //   margin: 0;
   background-image: url(/src/img/background_body.png);
 }
 
@@ -10,45 +13,25 @@ body {
   display: flex;
   flex: 1;
   justify-content: space-between;
-  &__left img {
+  &__logo img {
     height: 70px;
   }
-  &__right {
+  &__adress {
     padding-right: 50px;
     font-family: "Downcome", cursive;
   }
 }
 
-.line {
-  flex: 1;
-  padding: 15px;
-  flex-direction: row;
-  justify-content: space-between;
-  &__justify__center { // fuck you
-    display: flex;
-    justify-content: center;
-    margin: 10px 50px 0 50px;
-  }
-  &__two {
-    @media (max-width: 650px) {
-      flex-direction: column;
-    }
-    display: flex;
-    justify-content: space-between;
-    margin: 0 50px 0 50px;
-  }
-}
-
 .breadcrumb > li + li::before {
-  color: #f7f7f9;
+  color: $list-bg-color;
   content: ">";
 }
 
 .btn-warning-outline {
-  color: #ffbe41;
+  color: $warning;
   background-image: none;
   background-color: transparent;
-  border-color: #ffbe41;
+  border-color: $warning;
 }
 
 .label-danger {
@@ -59,13 +42,25 @@ body {
   background-color: #258039;
 }
 
+.general_information {
+  border: solid $border-size $brand-color;
+}
+
+.title {
+  border: solid $border-size black;
+}
+
+.item {
+  border: solid $border-size black;
+}
+
 .header,
 .footer {
   @media (max-width: 650px) {
     flex-direction: column;
   }
   min-height: 15vh;
-  background: url(/dist/img/background.jpg);
+  background: url(/src/img/background.jpg);
   padding: 15px;
   color: rgb(7, 1, 26);
 }
@@ -83,7 +78,7 @@ body {
 .alert {
   padding: 15px;
   margin-bottom: 1rem;
-  border: 1px solid transparent;
+  border: $border-size solid transparent;
 }
 
 .footer {
