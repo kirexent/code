@@ -12,14 +12,15 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'css/bundle.css',
         }),
-        new HtmlWebpackPlugin({
-            filename: 'onpug.html',
-            template: './src/pug/pages/onpug.pug',
-            inject: true
-        }),
+        new HtmlWebpackPlugin(),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/html/views/index.html',
+            inject: true
+        }),
+            new HtmlWebpackPlugin({
+            filename: 'onpug.html',
+            template: './src/pug/pages/onpug.pug',
             inject: true
         }),
     ],
@@ -41,7 +42,7 @@ module.exports = {
             },
             {
                 test: /\.pug$/,
-                loader: 'pug-loader'
+                loader: 'pug-loader?pretty=true'
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,

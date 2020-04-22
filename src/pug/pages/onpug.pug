@@ -1,19 +1,26 @@
 doctype html
-html(lang='en')
+html(lang='ru')
   head
-    title Jade
-    script(type='text/javascript').
-      const foo = true;
-      let bar = function() {};
-      if (foo) {
-      bar(1 + 5)
-      }
+    title Announcement
+    link(rel='stylesheet', href='../../../dist/css/bundle.css')
   body
-    h1 Jade - node template engine
-    #container.col
-      p You are amazing
-      p
-        | Jade is a terse and simple
-        | templating language with a
-        | strong focus on performance
-        | and powerful features.
+    .wrapper
+      .announcement
+        .announcement__title Front-end developer
+        .announcement__company
+          | Adamant
+        .announcement__areas
+          .announcement__programs  JavaScript
+          .announcement__programs  Illustrator
+          .announcement__programs  node.js
+          .announcement__programs  less/sass
+          .announcement__programs  sketch
+          .announcement__programs  OOCSS
+        .announcement__description
+          | Команда создателей платформы RadiumOne, входящей в пятёрку мировых лидеров
+          | по охвату аудитории /рейтинг comScore/, открывает позицию Front-end Developer. Это вёрстка новых компонентов
+          | и экранов, совершенствование существующих элементов.
+        #footer
+          .announcement__category Програмист | Mid
+          .announcement__numDate  #79172 | до 26 января 2015
+      script(src='../../../dist/js/bundle.js')

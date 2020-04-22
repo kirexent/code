@@ -19,26 +19,6 @@ body {
   }
 }
 
-.line {
-  flex: 1;
-  padding: 15px;
-  flex-direction: row;
-  justify-content: space-between;
-  &__justify__center { // fuck you
-    display: flex;
-    justify-content: center;
-    margin: 10px 50px 0 50px;
-  }
-  &__two {
-    @media (max-width: 650px) {
-      flex-direction: column;
-    }
-    display: flex;
-    justify-content: space-between;
-    margin: 0 50px 0 50px;
-  }
-}
-
 .breadcrumb > li + li::before {
   color: #f7f7f9;
   content: ">";
@@ -70,10 +50,6 @@ border: solid 1px black;
 .item {
   border: solid 1px black;
 }
-
-// .row {
-//   padding: 5px;
-// }
 
 .header,
 .footer {
